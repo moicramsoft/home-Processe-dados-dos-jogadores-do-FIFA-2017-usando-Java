@@ -1,74 +1,63 @@
 package challenge;
-
-import challenge.model.Jogador;
-
-import java.util.*;
-import java.util.stream.Collectors;
+import challenge.Main; 
+import static org.junit.Assert.*;
+import java.util.List;
+import java.util.Map;
+import org.junit.Test;
 
 public class MainTest {
 
-
-	private static final String URL = "C:\\Users\\Administrador\\codenation\\java-3\\src\\main\\resources\\data.csv";
-	private static final List<Jogador> jogadores = new JogadorConveter().convert(URL);
-	
-	// Quantas nacionalidades (coluna `nationality`) diferentes existem no arquivo?
-	public int q1() {
-		return this.getJogadores().stream()
-				.filter(jogador -> jogador.getNationality().trim().length() > 0)
-				.map(Jogador::getNationality)
-				.collect(Collectors.toSet()).size();
+	@Test
+	public void q1() throws Exception {
+		assertNotEquals(0, new Main().q1());
 	}
 
-	// Quantos clubes (coluna `club`) diferentes existem no arquivo?
-	// Obs: Existem jogadores sem clube.
-	public int q2() {
-		return this.getJogadores().stream()
-				.filter(jogador -> jogador.getClub().trim().length() > 0)
-				.map(Jogador::getClub).collect(Collectors.toSet()).size();
+	@Test
+	public void q2() throws Exception {
+		assertNotEquals(0, new Main().q2());
 	}
 
-	// Liste o nome completo (coluna `full_name`) dos 20 primeiros jogadores.
-	public List<String> q3() {
-		final int limit = 20;
-		return this.getJogadores().stream().map(Jogador::getFullName)
-				.limit(limit).collect(Collectors.toList());
+	@Test
+	public void q3() throws Exception {
+		List<String> result = new Main().q3();
+
+		assertNotNull(result);
+		assertEquals(20, result.size());
 	}
 
-	// Quem são os top 10 jogadores que possuem as maiores cláusulas de rescisão?
-	// (utilize as colunas `full_name` e `eur_release_clause`)
-	public List<String> q4() {
-		final int limit = 10;
-		return this.getJogadores().stream()
-				.sorted(Comparator.comparingLong(Jogador::getEurReleaseClause).reversed())
-				.limit(limit)
-				.map(Jogador::getFullName)
-				.collect(Collectors.toList());
+	@Test
+	public void q4() throws Exception {
+		List<String> result = new Main().q4();
+
+		assertNotNull(result);
+		assertEquals(10, result.size());
 	}
 
-	// Quem são os 10 jogadores mais velhos (use como critério de desempate o campo `eur_wage`)?
-	// (utilize as colunas `full_name` e `birth_date`)
-	public List<String> q5() {
-		final int limit = 10;
-		return this.getJogadores().stream()
-				.sorted(Comparator.comparing(Jogador::getBirthDate)
-				.thenComparing(Jogador::getEurWage))
-				.limit(limit)
-				.map(Jogador::getFullName)
-				.collect(Collectors.toList());
+	@Test
+	public void q5() throws Exception {
+		List<String> result = new Main().q5();
+
+		assertNotNull(result);
+		assertEquals(10, result.size());
 	}
 
-	// Conte quantos jogadores existem por idade. Para isso, construa um mapa onde as chaves são as idades e os valores a contagem.
-	// (utilize a coluna `age`)
-	public Map<Integer, Integer> q6() {
-		return getJogadores().stream()
-				.collect(Collectors.groupingBy(Jogador::getAge, Collectors.counting()))
-				.entrySet().stream().collect(Collectors.toMap(
-						entry -> Integer.parseInt(entry.getKey().toString()),
-						entry -> Integer.parseInt(entry.getValue().toString())
-				));
+	@SuppressWarnings("unchecked")
+	@Test
+	public void q6() throws Exception {
+		Map<Integer, Integer> result = new Main().q6();
+
+		assertNotNull((List<String>) result);
+		assertNotEquals(0, result.size());
 	}
 
-	public List<Jogador> getJogadores() {
-		return jogadores;
+	private void assertNotNull(List<String> result) {
+		// TODO Auto-generated method stub
+		
 	}
+
+	private void assertNotEquals(int i, int size) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

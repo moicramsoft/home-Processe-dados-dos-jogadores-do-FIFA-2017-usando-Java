@@ -1,22 +1,14 @@
 package challenge;
-
 import challenge.model.Jogador;
-
 import java.util.*;
 import java.util.stream.Collectors;
-
 public class Main {
-
-
 	private static final String URL = "C:\\Users\\Administrador\\codenation\\java-3\\src\\main\\resources\\data.csv";
 	private static final List<Jogador> jogadores = new JogadorConveter().convert(URL);
-	
 	// Quantas nacionalidades (coluna `nationality`) diferentes existem no arquivo?
 	public int q1() {
-		return this.getJogadores().stream()
-				.filter(jogador -> jogador.getNationality().trim().length() > 0)
-				.map(Jogador::getNationality)
-				.collect(Collectors.toSet()).size();
+		return this.jogadores.stream()
+				.map(Jogador::getNationality).collect(Collectors.toSet()).size();
 	}
 
 	// Quantos clubes (coluna `club`) diferentes existem no arquivo?

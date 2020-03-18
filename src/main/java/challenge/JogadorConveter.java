@@ -76,7 +76,7 @@ public class JogadorConveter extends Converter<Jogador> {
                 1 bilhão em relação aos demais.
              */
             value = value.split("E")[0] + "E+07";
-            return new BigDecimal(value.replace(",", ".")).longValue();
+            return new BigDecimal(value.replace(",",".")).longValue();
         }
         return Long.parseLong(value);
     }

@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Jogador {
     private long id;
     private String name;
-    private String fullName;
+    private String full_Name;
     private String club;
     private String clubLogo;
     private long special;
@@ -203,9 +203,9 @@ public class Jogador {
     public void setName(String value) { this.name = value; }
 
     @Column("full_name")
-    public String getFullName() { return fullName; }
+    public String getFullName() { return full_Name; }
     @Column("full_name")
-    public void setFullName(String value) { this.fullName = value; }
+    public void setFullName(String value) { this.full_Name = value; }
 
     @Column("club")
     public String getClub() { return club; }
@@ -1124,12 +1124,12 @@ public class Jogador {
         Jogador jogador = (Jogador) o;
         return id == jogador.id &&
                 name.equals(jogador.name) &&
-                Objects.equals(fullName, jogador.fullName);
+                Objects.equals(full_Name, jogador.full_Name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, fullName);
+        return Objects.hash(id, name, full_Name);
     }
 
     @Override
@@ -1137,7 +1137,7 @@ public class Jogador {
         return "Jogador{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", fullName='" + fullName + '\'' +
+                ", fullName='" + full_Name + '\'' +
                 ", club='" + club + '\'' +
                 ", clubLogo='" + clubLogo + '\'' +
                 ", special=" + special +

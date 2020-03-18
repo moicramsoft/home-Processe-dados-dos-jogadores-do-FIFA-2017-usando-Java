@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="challenge.SubmitTest" tests="6" skipped="0" failures="6" errors="0" timestamp="2020-03-18T01:58:28" hostname="MoicramSoft" time="0.22">
+<testsuite name="challenge.MainTest" tests="6" skipped="0" failures="6" errors="0" timestamp="2020-03-18T02:58:01" hostname="MoicramSoft" time="0.193">
   <properties/>
-  <testcase name="q1" classname="challenge.SubmitTest" time="0.217">
+  <testcase name="q1" classname="challenge.MainTest" time="0.19">
     <failure message="java.lang.ExceptionInInitializerError" type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
-	at challenge.SubmitTest.q1(SubmitTest.java:16)
+	at challenge.MainTest.q1(MainTest.java:12)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -64,13 +64,13 @@ Caused by: java.util.NoSuchElementException: No value present
 	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
 	at challenge.JogadorConveter.convert(JogadorConveter.java:31)
 	at challenge.JogadorConveter.convert(JogadorConveter.java:21)
-	at challenge.Main.&lt;clinit&gt;(Main.java:12)
+	at challenge.Main.&lt;clinit&gt;(Main.java:7)
 	... 48 more
 </failure>
   </testcase>
-  <testcase name="q2" classname="challenge.SubmitTest" time="0.0">
+  <testcase name="q2" classname="challenge.MainTest" time="0.0">
     <failure message="java.lang.NoClassDefFoundError: Could not initialize class challenge.Main" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class challenge.Main
-	at challenge.SubmitTest.q2(SubmitTest.java:21)
+	at challenge.MainTest.q2(MainTest.java:17)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -120,9 +120,9 @@ Caused by: java.util.NoSuchElementException: No value present
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="q3" classname="challenge.SubmitTest" time="0.001">
+  <testcase name="q3" classname="challenge.MainTest" time="0.0">
     <failure message="java.lang.NoClassDefFoundError: Could not initialize class challenge.Main" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class challenge.Main
-	at challenge.SubmitTest.q3(SubmitTest.java:48)
+	at challenge.MainTest.q3(MainTest.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -172,9 +172,9 @@ Caused by: java.util.NoSuchElementException: No value present
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="q4" classname="challenge.SubmitTest" time="0.0">
+  <testcase name="q4" classname="challenge.MainTest" time="0.0">
     <failure message="java.lang.NoClassDefFoundError: Could not initialize class challenge.Main" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class challenge.Main
-	at challenge.SubmitTest.q4(SubmitTest.java:65)
+	at challenge.MainTest.q4(MainTest.java:30)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -224,9 +224,9 @@ Caused by: java.util.NoSuchElementException: No value present
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="q5" classname="challenge.SubmitTest" time="0.001">
+  <testcase name="q5" classname="challenge.MainTest" time="0.0">
     <failure message="java.lang.NoClassDefFoundError: Could not initialize class challenge.Main" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class challenge.Main
-	at challenge.SubmitTest.q5(SubmitTest.java:82)
+	at challenge.MainTest.q5(MainTest.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -276,9 +276,9 @@ Caused by: java.util.NoSuchElementException: No value present
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="q6" classname="challenge.SubmitTest" time="0.0">
+  <testcase name="q6" classname="challenge.MainTest" time="0.0">
     <failure message="java.lang.NoClassDefFoundError: Could not initialize class challenge.Main" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class challenge.Main
-	at challenge.SubmitTest.q6(SubmitTest.java:118)
+	at challenge.MainTest.q6(MainTest.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
